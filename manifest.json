@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Linkedin Auto Connect",
+    "description": "This extension automatically sends connection request on Linkedin.",
+    "version": "1.0",
+    "icons": {
+      "128": "logo128.png",
+      "48": "logo48.png",
+      "16": "logo16.png"
+    },
+  
+    "page_action": {
+      "default_icon": "logo16.png",
+      "default_popup": "popup.html",
+      "default_title": "AutoConnect"
+    },
+  
+    "background": {
+      "scripts": ["eventPage.js"],
+      "persistent": false
+    },
+  
+    "content_scripts":[
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["script.js"]
+      }
+    ],
+  
+    "permissions": [
+      "tabs",
+      "https://www.linkedin.com/*"
+          ]
+  }
