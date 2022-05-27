@@ -1,0 +1,3 @@
+About the architecture, I had an idea that this thing could be done using DOM manipulation. We needed to grab all the "Connect" buttons. This could be done by using the class to get all the connect buttons. But this also gets "follow" buttons also because they had the same classes. So I filtered out the buttons using the innerHTML property to get only those buttons which had the text "Connect". Then simply I clicked on each of these buttons using a for loop. This brings up a confirmation box where I again select "send" button using the querySelectorAll method.
+
+The rest is about setting up the extension, where we have an eventPage running in background and a popup page with a button to start sending the connection requests.
